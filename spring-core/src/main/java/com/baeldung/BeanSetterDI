@@ -1,0 +1,21 @@
+package com.baeldung;
+public class BeanX {
+
+    private BeanY beanY;
+
+    private BeanZ beanZ;
+
+    private int i;
+
+    public void setBeanY (BeanY beanY) {
+        this.beanY= beanY;
+    }
+
+    public void setBeanZ (BeanZ beanZ) {
+        this.beanZ= beanZ;
+    }
+
+    public void setIntegerProperty(int i) {
+        this.i = i;
+    }
+}
