@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="BeanX " class="examples.BeanX ">
+    <!-- setter injection using the nested ref element -->
+    <property name="beanY">
+        <ref bean="beanYId"/>
+    </property>
+
+    <!-- setter injection using the neater ref attribute -->
+    <property name="beanZ" ref="beanZId"/>
+    <property name="integerProperty" value="1"/>
+</bean>
+
+<bean id="beanYId" class="examples.BeanY"/>
+<bean id="beanZId" class="examples.BeanZ"/>
+
+
+</beans>
