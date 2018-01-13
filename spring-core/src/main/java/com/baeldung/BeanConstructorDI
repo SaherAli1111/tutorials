@@ -1,0 +1,15 @@
+package com.baeldung;
+public class BeanX{
+
+    private BeanY beanY; 
+    private BeanZ beanZ;
+
+    private int i;
+
+    public BeanX(
+        BeanY beanY, BeanZ beanZ, int i) {
+        this.beanY= beanY;
+        this.beanZ= beanZ;
+        this.i = i;
+    }
+}
