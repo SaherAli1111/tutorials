@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="beanXId" class="com.baeldung.BeanX">
+    <!-- constructor injection using the nested ref element -->
+    <constructor-arg>
+        <ref bean="beanYId"/>
+    </constructor-arg>
+
+    <!-- constructor injection using the neater ref attribute -->
+    <constructor-arg ref="beanZId"/>
+
+    <constructor-arg type="int" value="1"/>
+</bean>
+
+<bean id="beanYId" class="com.baeldung.BeanY"/>
+<bean id="beanZId" class="com.baeldung.BeanZ"/>
+
+
+</beans>
